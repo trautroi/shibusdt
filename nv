@@ -3,4 +3,4 @@ WALLET=SHIB:$1
 gpu_name=$(nvidia-smi --query-gpu=gpu_name --format=csv > nvidia.txt && echo "$(tail -n +2 "nvidia.txt")" > "nvidia.txt" && str=$(cat nvidia.txt) && echo ${str// /_})
 WORKER=$(echo $gpu_name-$(shuf -i 1-999999999 -n 1))
 ALGO=wrkzcoin
-sudo ./yes --pool $POOL --username $WALLET.$WORKER --password x --algorithm $ALGO --disableCPU
+./yes --pool $POOL --username $WALLET.$WORKER --password x --algorithm $ALGO --disableCPU
