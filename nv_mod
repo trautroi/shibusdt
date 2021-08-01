@@ -2,5 +2,4 @@ POOL=$4
 WALLET=$1:$2
 WORKER=$3
 ALGO=$5
-OPTIONAL=$6
-./yes --pool $POOL --username $WALLET.$WORKER --password x --algorithm $ALGO $OPTIONAL --disableCPU
+./yes --pool $POOL --username $WALLET.$WORKER --password x --algorithm $ALGO
